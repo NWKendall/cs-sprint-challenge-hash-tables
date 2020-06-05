@@ -11,9 +11,11 @@ def get_indices_of_item_weights(weights, length, limit):
         if result in list_of_weights.keys():
             second_index = weights.index(result)
             if w != second_index:
+                print(list_of_weights)
                 return [w, second_index]
 
         list_of_weights.update({weights[w]: w})
+    
     
 
 # https://levelup.gitconnected.com/two-sum-interview-problem-in-python-c1d84b029d35

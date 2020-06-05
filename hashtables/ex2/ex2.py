@@ -16,13 +16,14 @@ def reconstruct_trip(tickets):
     journey = []
     for t in tickets:
         # populate dictionary
-        print("TICKET SOURCE:", t.source)
-        if flights[t.source] == t.source:
-            journey.append(t.source)
-        else:
-            flights[t.source] = t.destination
+        flights[t.source] = t.destination
         
-    return journey
+    def visit(tickets):
+        while flights[tickets]:
+            visit(flights[tickets].pop())
+        journey.append(tickets)
+
+    return journey[::-1]
 
 
 trip = [Ticket("PIT", "ORD"),
