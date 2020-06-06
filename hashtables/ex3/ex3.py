@@ -3,10 +3,11 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
-    sets = iter(map(set, arrays))
-    result = sets.next()
-    for s in sets:
-        result = result.intersection(s)
+    dic = {}
+    result = set(arrays)
+    for s in arrays:
+        dic[s[0]] = s
+
     return result
 
 
