@@ -23,11 +23,24 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
 1. Hashing functions
+    - converts any type of input data (key) into an output with a number value that falls within a certain range to be indexed within a list/array.
 2. Collision resolution
+    - When two pieces of data run through the same hash function produce the same hash code.
+        - linear probing - resolves collision by searching hash table sequentially until vacancy is found
+        - quadratic probing - similar to above, but for every collision, will search collision_number^2 spaces
+        - chaining - each array entry is the head of an LL. Chaining adds other entries/links to the chain
 3. Performance of basic hash table operations
+    - Constant Time = O(1) 
+    - For insertion, deletion and search.
 4. Load factor
+    - current occupancy of the has table / maximum capacity
+    - important measure for performance and memory management
 5. Automatic resizing
+    - when ever an entry is added or removed from the hash table, the load factor is checked. If a threshold is breached, the resize function would execute automatically (depeneding on the function parameters)
 6. Various use cases for hash tables
+    - encryption / decryption (authentication)
+    - search
+    - programming (JS = objects, Py = dict)
 
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
